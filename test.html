@@ -7,10 +7,23 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        :root {
+            --text-color: rgb(167, 162, 153);
+            --link-color: rgb(167, 162, 153);
+            ;
+            /* Default link color */
+            --link-hover-color: rgb(167, 162, 153);
+            ;
+            /* Color on hover */
+            --link-visited-color: rgb(167, 162, 153);
+            ;
+            /* Color for visited links */
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #1A261D;
-            color: rgb(167, 162, 153);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -64,6 +77,11 @@
             /* Default width for larger screens */
             overflow: hidden;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            /* Stack vertically */
+            align-items: center;
+            /* Center items horizontally */
         }
 
         .card:hover {
@@ -164,8 +182,22 @@
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #70440a;
             /* Darker blue on hover */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--text-color);
+            /* Color on hover */
+        }
+
+        a:visited {
+            color: var(--text-color);
+            /* Color for visited links */
         }
     </style>
 </head>
@@ -198,13 +230,17 @@
 
 
     <div class="card-container">
-        <div class="card">
-            <img src="project1-image-url.jpg" alt="Project 1">
-            <div class="card-content">
-                <h3>Project 1</h3>
-                <p>Brief description of Project 1. It includes technologies and purpose.</p>
+        <a href="https://github.com/sweeneyb/classification-tool/tree/main/doc/images">
+            <div class="card">
+                <img src="assets/ui-sample.png" alt="Project 1" class="rounded-image">
+                <div class="card-content">
+                    <h3>Image Classification tool</h3>
+                    <p>ML is all the rage, but the labels and image sets can be limited. I needed to label a large
+                        number of
+                        images quickly, and built an electon app for just that.</p>
+                </div>
             </div>
-        </div>
+        </a>
         <div class="card">
             <img src="project2-image-url.jpg" alt="Project 2">
             <div class="card-content">
