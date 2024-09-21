@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            background-image: url('your-photo-url.jpg'); /* Replace with your image URL */
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .about {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 300px; /* Default width for larger screens */
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%; /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Welcome to My Portfolio</h1>
+    </div>
+
+    <div class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate developer with experience in creating dynamic web applications. I love coding and exploring new technologies.</p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="project1-image-url.jpg" alt="Project 1">
+            <div class="card-content">
+                <h3>Project 1</h3>
+                <p>Brief description of Project 1. It includes technologies and purpose.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="project2-image-url.jpg" alt="Project 2">
+            <div class="card-content">
+                <h3>Project 2</h3>
+                <p>Brief description of Project 2. It includes technologies and purpose.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="project3-image-url.jpg" alt="Project 3">
+            <div class="card-content">
+                <h3>Project 3</h3>
+                <p>Brief description of Project 3. It includes technologies and purpose.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="project4-image-url.jpg" alt="Project 4">
+            <div class="card-content">
+                <h3>Project 4</h3>
+                <p>Brief description of Project 4. It includes technologies and purpose.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="project5-image-url.jpg" alt="Project 5">
+            <div class="card-content">
+                <h3>Project 5</h3>
+                <p>Brief description of Project 5. It includes technologies and purpose.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
