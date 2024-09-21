@@ -38,6 +38,10 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+
+            margin: 0 auto;
+            width: 50%;
+
         }
 
         .about h2 {
@@ -94,7 +98,74 @@
             /* Optional: Limits the maximum width of the image */
             height: auto;
             /* Maintains the aspect ratio */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 63%;
+            display: flex;
+            margin: 0 auto;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 8px;
+            align-items: center;
+            /* Center items vertically */
+        }
+
+        .left-image {
+            margin-right: 20px;
+        }
+
+        .text-container {
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                /* Stack vertically */
+                align-items: center;
+                /* Center items */
+            }
+
+            .left-image {
+                margin: 0 0 20px 0;
+                /* Add bottom margin for spacing */
+            }
+        }
+
+        .floating-buttons {
+            position: fixed;
+            /* Fix position relative to the viewport */
+            top: 20px;
+            /* Distance from the top */
+            right: 20px;
+            /* Distance from the right */
+            display: flex;
+            flex-direction: column;
+            /* Stack buttons vertically */
+            gap: 10px;
+            /* Space between buttons */
+        }
+
+        .button {
+            /* Bootstrap primary color */
+            color: white;
+            padding: 10px 15px;
+            /* Button padding */
+            text-decoration: none;
+            /* Remove underline */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s;
+            /* Smooth background transition */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
         }
     </style>
 </head>
@@ -102,19 +173,29 @@
 <body>
 
     <div class="banner">
-        <h1>Welcome to My Portfolio</h1>
+        <h1>I'm Brian..</h1>
     </div>
 
-    <div class="about">
-        <div>
-            <img src="assets/avatar.jpg" alt="my picture" height="100" width="100" class="rounded-image" />
-        </div>
-        <div>
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate developer with experience in creating dynamic web applications. I love coding and
-                exploring new technologies.</p>
+    <div class="container">
+        <img src="assets/avatar.jpg" alt="my picture" height="100" width="100" class="rounded-image left-image" />
+        <div class="text-container">
+            <h2>I venture up the stack, down the stack... towards easier stacks.</h2>
+            <p>I work as an SRE to keep developer and user-facing platforms secure, stable, and graceful when they
+                degrade. I've previously worked as a platform engineer,
+                in a dev(sec)ops team, and as a backend developer.</p>
+            <p>Beyond keeping stable, I look for ways that software can make the lives of users easier. We all have too
+                much going on, and cognitive switches are time sinks.
+                My goal is to create software that fades into the background so that you can do what you love or
+                produces value. Delight and utility over engagement.
+            </p>
+            <p>I dabble a lot. Many of my repos are PoC type things, intended to work just enough to get a feel for
+                the toolchain, possibilities, and applicability. I try to keep things MIT/BSD licensed so you can take
+                things and run. Contact me if you'd like to explore more.
+            </p>
+            <p>When not immersed in code, I spend time in my garden, with my cats, and exploring art.</p>
         </div>
     </div>
+
 
     <div class="card-container">
         <div class="card">
@@ -154,6 +235,10 @@
         </div>
     </div>
 
+    <div class="floating-buttons">
+        <a href="https://www.linkedin.com/in/brian-sweeney-software-engineer/" class="button">LinkedIn</a>
+        <a href="https://briansweeney.dev" class="button">Blog</a>
+    </div>
 </body>
 
 </html>
