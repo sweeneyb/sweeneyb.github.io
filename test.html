@@ -237,39 +237,88 @@
                     <h3>Image Classification tool</h3>
                     <p>ML is all the rage, but the labels and image sets can be limited. I needed to label a large
                         number of
-                        images quickly, and built an electon app for just that.</p>
+                        images quickly, and built an electon app for just that. The goal is to pull in the Met's public
+                        domain art and
+                        print/painting type works.</p>
                 </div>
             </div>
         </a>
-        <div class="card">
-            <img src="project2-image-url.jpg" alt="Project 2">
-            <div class="card-content">
-                <h3>Project 2</h3>
-                <p>Brief description of Project 2. It includes technologies and purpose.</p>
+        <a href="https://preference-finder.web.app/?collection=first">
+            <div class="card">
+                <img src="project2-image-url.jpg" alt="Project 2">
+                <div class="card-content">
+                    <h3>Art finder & ML suggestions</h3>
+                    <p>Building on the Image Classification tool, show art from the Met's public domain collection and
+                        figure out what you
+                        and your living partner(s) like. When I get enough data, start suggesting things.
+                    </p>
+                    <p><a href="https://github.com/sweeneyb/preferences-finder">source code</a></p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="project3-image-url.jpg" alt="Project 3">
-            <div class="card-content">
-                <h3>Project 3</h3>
-                <p>Brief description of Project 3. It includes technologies and purpose.</p>
+        </a>
+        <a href="https://github.com/sweeneyb/devEnvs">
+            <div class="card">
+                <img src="project3-image-url.jpg" alt="Project 3">
+                <div class="card-content">
+                    <h3>Cloud-based dev environments</h3>
+                    <p>All the terraform you need to provision a java development environment with docker. VM is in the
+                        google cloud on your
+                        billing account. SSH keys are provisioned automatically.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="project4-image-url.jpg" alt="Project 4">
-            <div class="card-content">
-                <h3>Project 4</h3>
-                <p>Brief description of Project 4. It includes technologies and purpose.</p>
+        </a>
+        <a href="https://github.com/sweeneyb/blockly-firewall-rule-gen">
+            <div class="card">
+                <img src="assets/firewall-gen.png" alt="Project 4" class="rounded-image">
+                <div class="card-content">
+                    <h3>Low-code firewall rules</h3>
+                    <p>Firewall rule languages are incredibly high-context. Since I only make changes 2x per year, I build a tool
+                        in blockly so I can
+                        visually build my firewall rules. The tool translates blocks into the text rules my devices
+                        understand.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="project5-image-url.jpg" alt="Project 5">
-            <div class="card-content">
-                <h3>Project 5</h3>
-                <p>Brief description of Project 5. It includes technologies and purpose.</p>
+        </a>
+        <a href="https://github.com/sweeneyb/png-to-epaper">
+            <div class="card">
+                <img src="project5-image-url.jpg" alt="Project 5">
+                <div class="card-content">
+                    <h3>E-paper display</h3>
+                    <p>ESP-32 code to display content to a 3-color e-ink display.  Stationed outside of my door to let my wife know I'm
+                        in a meeting.  Memory constraints prevent decoding even the slimmest bit-depth pngs.
+                    </p>
+                    <p><a href="https://github.com/sweeneyb/epaper-images">server code</a></p>
+                </div>
             </div>
-        </div>
+        </a>
+
+        <a href="https://github.com/sweeneyb/uprobe">
+            <div class="card">
+                <img src="project5-image-url.jpg" alt="Project 6">
+                <div class="card-content">
+                    <h3>ebpf/uprobe tracing</h3>
+                    <p>An extremely minimal setup with go and clang to use the linux kernel features to monitor function calls in a
+                        general program without tools like gdb. This project watches executions and tallies counts of argument values.  
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/sweeneyb/file-purge">
+            <div class="card">
+                <img src="project5-image-url.jpg" alt="Project 7">
+                <div class="card-content">
+                    <h3>Policy based (timed) file deletion</h3>
+                    <p>S3 provides a great way to apply a policy that deletes files after some expiry time.  It's unfortunate that local filesystems haven't caught up, 
+                        but the linux inotify API (and the fsnotify package in golang) take up some slack.  This project seeks to remove file after some amount of time
+                        via OPA policies.  It works, but doesn't scale.  The memory footprint to hold the paths quickly blows up as you churn 10k+ of files.
+                    </p>
+                </div>
+            </div>
+        </a>
     </div>
+
 
     <div class="floating-buttons">
         <a href="https://www.linkedin.com/in/brian-sweeney-software-engineer/" class="button">LinkedIn</a>
